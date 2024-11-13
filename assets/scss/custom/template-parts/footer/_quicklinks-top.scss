@@ -1,0 +1,26 @@
+.quicklinks-top-container {
+    #footer-quicklinks-top {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        grid-template-columns: auto;
+        justify-content: center;
+        gap: 15px;
+
+        .main-menu-item {
+            text-align: center;
+        }
+
+        @media screen and (min-width: $tablet) {
+            grid-template-columns: auto auto;
+            .main-menu-item {
+                text-align: left;
+            }
+        }
+        @media screen and (min-width: $laptop) {
+            grid-template-columns: auto auto auto auto;
+            gap: 25px;
+        }
+    }
+}

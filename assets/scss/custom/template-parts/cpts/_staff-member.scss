@@ -1,0 +1,86 @@
+// main: ../../../../../style.scss
+.staff-member {
+    --decoline-width: 90%;
+    --decoline-left: 5%;
+
+    display: flex;
+    flex-direction: column;
+    // height: 100%;
+    padding: 3px;
+    background: var(--clr-primary);
+    .staff-member-image {
+        height: 100%;
+        aspect-ratio: 2 / 2;
+        object-fit: cover;
+    }
+    .staff-member-info {
+        background: var(--clr-primary);
+        padding: 0px 7px;
+        // text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        transition: var(--tr-padding);
+
+        * {
+            color: white;
+        }
+
+        .staff-member-title {
+            margin: 0;
+            font-family: var(--font-heading);
+            position: relative;
+            // &::after {
+            //     content: "";
+            //     position: absolute;
+            //     bottom: -5px;
+            //     left: var(--decoline-left);
+            //     width: var(--decoline-width);
+            //     height: 1px;
+            //     transition: var(--tr-width), var(--tr-left);
+            //
+            //     background: white;
+            // }
+        }
+
+        .staff-member-position {
+            font-size: 16px;
+        }
+
+        .staff-member-contact-wrapper {
+            display: flex;
+            // flex-direction: column;
+            // justify-content: space-between;
+            font-size: 16px;
+            margin-top: 20px;
+            transition: var(--tr-padding);
+
+            a {
+                text-transform: none;
+            }
+
+            a.staff-member-email {
+              margin-right: 10px;
+            }
+
+            a.staff-member-phone {
+                text-decoration: none;
+            }
+            i {
+              font-size: 24px;
+            }
+        }
+    }
+
+    // &:hover {
+    //     --decoline-width: 100%;
+    //     --decoline-left: 0;
+    //     .staff-member-info {
+    //         padding-top: 10px;
+    //
+    //         .staff-member-contact-wrapper {
+    //             padding-top: 5px;
+    //         }
+    //     }
+    // }
+}

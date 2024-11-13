@@ -1,0 +1,96 @@
+// main: ../../../../style.scss
+  .plinko:nth-of-type(even) {
+    flex-direction: row-reverse;
+  }
+  .plinko {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background:#FAFAFA;
+    padding:0 10%;
+    margin-bottom:2.5rem;
+    max-width: 100%;
+	}
+  .plinko .plinkoContent,
+  .plinko .plinkoMedia {
+    width: 48.5%;
+  }
+  .plinko .plinkoContent .plinkoTitle {
+    font-size: 2.25rem;
+    font-weight: 700;
+  }
+  .plinko .plinkoContent .plinkoText {
+    color: #616161;
+    font-size: 1.125rem;
+  }
+  .plinko .plinkoContent .plinkoRepeater {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin-top: 1.5625rem;
+  }
+  .plinko .plinkoContent .plinkoRepeater .plinkoButtons,
+  .plinko .plinkoContent .plinkoRepeater .plinkoIcons {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    flex: 1;
+  }
+  .plinko .plinkoContent .plinkoRepeater .plinkoButtons .theButton {
+    display: table;
+    background: #006937;
+    color: #FFFFFF;
+    font-size: 18px;
+    font-style: normal;
+    text-transform: uppercase;
+    width: fit-content;
+    padding: 0.8125rem 3.0625rem;
+    border:2px solid #006937;
+    border-radius:13px;
+    margin-right: 5%;
+  }
+  .plinko .plinkoContent .plinkoRepeater .plinkoButtons .theButton:hover,
+  .plinko .plinkoContent .plinkoRepeater .plinkoButtons .theButton:focus {
+    background: #FFFFFF;
+    color: #006937;
+    text-decoration: none;
+  }
+  .plinko .plinkoContent .plinkoRepeater i {
+    color: #AF854A;
+    font-size: 1.75rem;
+    margin-right: 5%;
+  }
+
+  .plinko .plinkoMedia iframe,
+  .plinko .plinkoMedia img {
+    height: 28.875rem;
+  }
+  .plinko .plinkoMedia img {
+    width: auto;
+  }
+
+  @media screen and (max-width: 1300px){
+    .plinko {
+      flex-direction: column;
+    }
+    .plinko .plinkoContent,
+    .plinko .plinkoMedia {
+      width: 100%;
+    }
+    .plinko .plinkoContent {
+      margin-bottom: 1rem;
+    }
+    .plinko .plinkoContent .plinkoRepeater {
+      width: 100%;
+    }
+    .plinko .plinkoMedia {
+      text-align: center;
+    }
+  }
+  @media screen and (max-width: 768px){
+    .plinko .plinkoContent .plinkoRepeater .plinkoButtons {
+      margin-bottom: 1rem;
+    }
+  }

@@ -1,0 +1,28 @@
+// main: ../../../../style.scss
+.teaser-box {
+    border: 2px solid var(--grey);
+    box-shadow: var(--box-shadow);
+    .teaser-img {
+        aspect-ratio: 322 / 206;
+        object-fit: cover;
+        @media screen and (min-width: $tablet) {
+            aspect-ratio: 370 / 305;
+        }
+    }
+    .teaser-content-wrapper {
+        padding: 0 1.5rem 2.5rem;
+        .teaser-content {
+            height: 100%;
+            margin-bottom: 2rem;
+            .excerpt {
+              word-break: break-word;
+            }
+        }
+    }
+    .links-container {
+        padding-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

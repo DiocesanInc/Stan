@@ -1,0 +1,65 @@
+// main: ../../../../style.scss
+body,
+html,
+p,
+div,
+ul,
+li {
+    font-size: var(--fs-400, 16px);
+    font-family: var(--font-main);
+}
+p {
+    margin: 0.5rem 0;
+}
+h1 {
+    font-size: var(--fs-1000, 30px);
+    // text-transform: uppercase;
+}
+h2 {
+    font-size: var(--fs-900, 30px);
+    // text-transform: uppercase;
+}
+h3 {
+    font-size: var(--fs-800, 27px);
+}
+h4 {
+    font-size: var(--fs-700, 25px);
+}
+h5 {
+    font-size: var(--fs-600, 25px);
+}
+h6 {
+    font-size: var(--fs-500, 20px);
+}
+a {
+    transition: color 0.4s ease;
+    text-transform: uppercase;
+}
+.hero-title {
+    font-size: clamp(40px, 4.75vw, 70px);
+}
+.section-header-s {
+    font-size: clamp(28px, 2.5vw, 45px);
+}
+.section-header-m {
+    font-size: clamp(30px, 3vw, 52px);
+}
+.section-header-xl {
+    font-size: clamp(26px, 3.75vw, 60px);
+}
+.has-text-decoration {
+    position: relative;
+    &::after {
+        content: "";
+        width: clamp(100px, 8vw, 130px);
+        height: 2px;
+        position: absolute;
+        bottom: -20px;
+        left: 0;
+        background: var(--clr-secondary);
+    }
+    &.text-decoration-is-centered::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}

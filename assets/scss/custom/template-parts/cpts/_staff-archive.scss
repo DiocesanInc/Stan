@@ -1,0 +1,29 @@
+// main: ../../../../../style.scss
+.staff-category {
+    margin-bottom: 7rem;
+}
+.staff-category-members {
+    display: grid;
+    grid-template-columns: auto;
+    row-gap: 80px;
+}
+
+@media screen and (min-width: $tablet) {
+    .staff-category-members {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+@media screen and (min-width: $laptop) {
+    .staff-category-members {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+}
+
+// @media screen and (min-width: $desktop) {
+//     .staff-category-members {
+//         grid-template-columns: repeat(4, 1fr);
+//     }
+// }

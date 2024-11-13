@@ -1,0 +1,57 @@
+//main: ../../../../style.scss
+.the-button {
+    background: var(--button-background-color, var(--clr-secondary));
+    color: var(--button-font-color, white);
+    padding: 0.4rem 1rem;
+    text-decoration: none;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid var(--button-border-color, var(--clr-secondary));
+    // transition: var(--tr-background), var(--tr-transform), var(--tr-color);
+    font-size: var(--fs-500);
+    cursor: pointer;
+    font-weight: bold;
+    position: relative;
+    border-radius: 5px;
+    &:hover,
+    &:focus {
+        text-decoration: none;
+        background: var(--button-background-color-hover, white);
+        color: var(--button-font-color-hover, var(--clr-secondary));
+        border: 3px solid var(--button-border-color, var(--clr-secondary));
+        transform: var(--scale);
+        font-weight: bold;
+        box-shadow: 3px 3px 8px #00000090;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        border: 10px solid rgba(111, 148, 182, 0.2);
+        border-radius: 50%;
+        opacity: 0;
+    }
+    &.clicked::after {
+        animation: button-click 0.3s forwards;
+    }
+    &:focus::after {
+        animation: button-click 0.3s forwards;
+    }
+}
+
+@keyframes button-click {
+    0% {
+        transform: scale3d(0.3, 0.3, 1);
+    }
+    25%,
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: scale3d(1.2, 1.2, 1);
+    }
+}

@@ -1,0 +1,7 @@
+// main: ../../../../../style.scss
+.header-nav {
+    display: flex;
+    justify-content: space-between;
+    max-width: calc(90% - 60px);
+    @import "site-branding";
+}

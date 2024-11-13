@@ -1,0 +1,62 @@
+// main: ../../../../../style.scss
+
+.mass-times-container {
+  display: flex;
+  flex-direction: column;
+  .mass-times-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  .mass-times-times {
+    display: flex;
+    flex-direction: column;
+  }
+  .mass-time {
+    display: flex;
+  }
+  &.limit-width {
+    width: 60%;
+  }
+  img {
+    max-height: 215px;
+    object-fit: cover;
+    margin-top: 20px;
+  }
+}
+
+@media screen and (min-width: 1025px){
+  .mass-times-container {
+    display: flex;
+    flex-direction: column;
+    .mass-times-section {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      .mass-times-mid-section {
+        width: 48%;
+      }
+      &:nth-child(2){
+        flex-direction: row-reverse;
+      }
+    }
+    .mass-times-times {
+      display: flex;
+      flex-direction: column;
+    }
+    .mass-time {
+      display: flex;
+    }
+    &.limit-width {
+      width: 60%;
+    }
+    img {
+      max-height: 215px;
+      object-fit: cover;
+      width: 48%;
+      margin-top: 0;
+    }
+  }
+}

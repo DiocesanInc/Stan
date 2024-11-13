@@ -1,0 +1,62 @@
+// main: ../../../../../style.scss
+.news-heading-wrapper {
+    text-align: center;
+    margin-top: var(--homepage-section-spacing);
+}
+
+.news-container {
+    display: flex;
+    flex-wrap: wrap;
+    --max-width: 80%;
+
+    margin-top: var(--homepage-section-spacing);
+
+    &.limit-width {
+        max-width: var(--max-width);
+    }
+
+    .slick-track {
+        gap: 20px;
+    }
+
+    .post-wrapper {
+      background: var(--clr-primary);
+      box-shadow: var(--box-shadow);
+      margin-bottom: 30px;
+    }
+    .post-heading, .post-excerpt, .post-read-more {
+      margin-left: 1.5rem;
+      margin-right: 1.5rem;
+      color: #fff;
+    }
+    .post-read-more {
+        margin-top: 20px;
+        display: inline-block;
+    }
+
+    .slick-next {
+        right: -30px;
+    }
+    .slick-prev {
+        left: -30px;
+    }
+
+    @media screen and (min-width: $tablet) {
+        --max-width: 75%;
+        justify-content: space-between;
+      .post-wrapper {
+          width: calc(50% - 20px);
+      }
+    }
+    @media screen and (min-width: $desktop) {
+      .post-wrapper {
+          width: calc(33% - 20px);
+          margin-bottom: 0;
+      }
+    }
+}
+
+.news-read-more-wrapper {
+    margin-top: 70px;
+    text-align: center;
+}

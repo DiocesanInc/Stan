@@ -1,0 +1,83 @@
+<?php
+
+function acf_news()
+{
+    return array(
+        array(
+            'key' => 'field_619e4b8e20523',
+            'label' => 'News',
+            'name' => '',
+            'type' => 'tab',
+            'instructions' => '',
+            'required' => 0,
+            'conditional_logic' => 0,
+            'wrapper' => array(
+                'width' => '',
+                'class' => '',
+                'id' => '',
+            ),
+            'placement' => 'top',
+            'endpoint' => 0,
+        ),
+        array(
+            'key' => 'field_62d2f70714e17',
+            'label' => 'Heading',
+            'name' => 'news_heading',
+            'type' => 'text',
+            'instructions' => '*Max 20 characters',
+            'required' => 0,
+            'conditional_logic' => 0,
+            'wrapper' => array(
+                'width' => '33',
+                'class' => '',
+                'id' => '',
+            ),
+            'default_value' => '',
+            'placeholder' => '',
+            'prepend' => '',
+            'append' => '',
+            'maxlength' => 20,
+        ),
+        array(
+            'key' => 'field_62d2f72d14e18',
+            'label' => 'Subheading',
+            'name' => 'news_subheading',
+            'type' => 'text',
+            'instructions' => '*Max 40 characters',
+            'required' => 0,
+            'conditional_logic' => 0,
+            'wrapper' => array(
+                'width' => '33',
+                'class' => '',
+                'id' => '',
+            ),
+            'default_value' => '',
+            'placeholder' => '',
+            'prepend' => '',
+            'append' => '',
+            'maxlength' => 40,
+        ),
+        array(
+            'key' => 'field_61ead174d187a',
+            'label' => 'News Category',
+            'name' => 'news_category',
+            'type' => 'taxonomy',
+            'instructions' => '',
+            'required' => 0,
+            'conditional_logic' => 0,
+            'wrapper' => array(
+                'width' => '33',
+                'class' => '',
+                'id' => '',
+            ),
+            'taxonomy' => 'category',
+            'field_type' => 'select',
+            'allow_null' => 1,
+            'add_term' => 0,
+            'save_terms' => 0,
+            'load_terms' => 0,
+            'return_format' => 'id',
+            'multiple' => 0,
+        ),
+    );
+}

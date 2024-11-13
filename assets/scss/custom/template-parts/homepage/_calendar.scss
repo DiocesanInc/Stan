@@ -1,0 +1,24 @@
+.calendar-container {
+    --grid-layout: auto;
+
+    text-align: center;
+    .simcal-events-list-container {
+        display: grid;
+        grid-template-columns: var(--grid-layout);
+        .simcal-event {
+            list-style: none;
+            .simcal-event-details {
+                display: flex;
+                gap: 2rem;
+            }
+        }
+    }
+
+    @media screen and (min-width: $tablet) {
+        --grid-layout: auto auto;
+    }
+
+    @media screen and (min-width: $desktop) {
+        --grid-layout: auto auto auto;
+    }
+}

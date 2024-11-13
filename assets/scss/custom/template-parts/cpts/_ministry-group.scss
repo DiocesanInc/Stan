@@ -1,0 +1,56 @@
+.ministry-container.taxonomy-container {
+    --teaser-img-height: 200px;
+    --teaser-img-width: 300px;
+    --teaser-box-width: 100%;
+
+    .teaser-box {
+        display: flex;
+        flex-direction: column;
+        padding: 25px;
+        margin-bottom: 40px;
+        width: var(--teaser-box-width);
+
+        .teaser-img {
+            max-height: var(--teaser-img-height);
+            max-width: var(--teaser-img-width);
+        }
+
+        .teaser-title {
+            margin: 0;
+        }
+
+        a {
+            text-transform: none;
+        }
+
+        .contact-person {
+            margin-top: 5px;
+        }
+
+        .contact-person-phone a {
+            text-decoration: none;
+        }
+
+        .contact-person-email a {
+            margin-left: 10px;
+            text-decoration: underline;
+        }
+    }
+
+    @media screen and(min-width: $tablet) {
+        --teaser-img-width: none;
+
+        .teaser-box {
+            flex-direction: row;
+        }
+    }
+
+    @media screen and(min-width: $laptop) {
+        --teaser-img-height: 300px;
+    }
+
+    @media screen and(min-width: $desktop) {
+        --teaser-img-height: 200px;
+        --teaser-box-width: calc(50% - 40px);
+    }
+}
