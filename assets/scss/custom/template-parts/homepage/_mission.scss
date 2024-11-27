@@ -1,68 +1,68 @@
 // main: ../../../../../style.scss
 .mission-container {
-    margin-top: var(--homepage-section-spacing);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    position: relative;
-    max-width: 95%;
-    z-index: 10;
-    .mission-header {
-        color: var(--clr-secondary);
-        font-size: clamp(25px, 2.5vw, 40px);
-        margin-block: 0 0px;
-        font-weight: bold;
-        text-align: center;
-    }
+  margin-top: var(--homepage-section-spacing);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  max-width: 95%;
+  z-index: 10;
+  .mission-header {
+    color: var(--clr-secondary);
+    font-size: clamp(25px, 2.5vw, 40px);
+    margin-block: 0 0px;
+    font-weight: bold;
+    text-align: center;
+  }
 
-    .mission-link-wrapper {
-        margin-top: var(--homepage-section-spacing);
-        text-align: center;
-    }
+  .mission-link-wrapper {
+    margin-top: var(--homepage-section-spacing);
+    text-align: center;
+  }
 }
 
 .mission-content-wrapper {
-    --mission-max-width: 90%;
-    --mission-image-width: 100%;
-    --mission-image-aspect-ratio: 4 / 3;
+  --mission-max-width: 90%;
+  --mission-image-width: 100%;
+  --mission-image-aspect-ratio: 4 / 3;
 
-    text-align: center;
+  text-align: center;
+  position: relative;
+  max-width: var(--mission-max-width);
+  margin-inline: auto;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  flex-direction: column;
+
+  .mission-content {
+    color: black;
+    font-size: clamp(16px, 2vw, 20px);
     position: relative;
-    max-width: var(--mission-max-width);
-    margin-inline: auto;
-    z-index: 10;
-    display: flex;
-    align-items: center;
-    gap: 50px;
-    flex-direction: column;
-
-    .mission-content {
-        color: black;
-        font-size: clamp(16px, 2vw, 20px);
-        position: relative;
-        p {
-            font-size: inherit;
-            color: inherit;
-            line-height: 1.2;
-            margin: 0;
-        }
+    p {
+      font-size: inherit;
+      color: inherit;
+      line-height: 1.2;
+      margin: 0;
     }
-    .mission-image {
-        aspect-ratio: var(--mission-image-aspect-ratio);
-        max-width: var(--mission-image-width);
-        object-fit: cover;
-    }
+  }
+  .mission-image {
+    aspect-ratio: var(--mission-image-aspect-ratio);
+    max-width: var(--mission-image-width);
+    object-fit: cover;
+  }
 
-    @media screen and(min-width: $laptop) {
-        --mission-image-width: 33%;
-        --mission-max-width: 75%;
-        --mission-image-aspect-ratio: 1 / 1;
+  @media screen and (min-width: $laptop) {
+    --mission-image-width: 33%;
+    --mission-max-width: 75%;
+    --mission-image-aspect-ratio: 1 / 1;
 
-        &.left {
-            flex-direction: row;
-        }
-        &.right {
-            flex-direction: row-reverse;
-        }
+    &.left {
+      flex-direction: row;
     }
+    &.right {
+      flex-direction: row-reverse;
+    }
+  }
 }
